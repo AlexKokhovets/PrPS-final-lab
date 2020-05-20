@@ -327,7 +327,7 @@ class DBHelper
     }
     
     func getBrigadeId(id: Int) -> Int32 {
-           let queryStatementString = "SELECT Orders.ID from Employee join Orders on Employee.ID = Orders.employeeID WHERE Employee.ID = (?);"
+           let queryStatementString = "SELECT Orders.brigadeID from Employee join Orders on Employee.ID = Orders.employeeID WHERE Employee.ID = (?);"
            var queryStatement: OpaquePointer? = nil
 
         if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK {
